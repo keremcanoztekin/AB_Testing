@@ -1,4 +1,4 @@
-# AB_Testing
+# A/B Testing
 
 <img src="https://user-images.githubusercontent.com/103461795/225143063-07e98e6d-cf4e-48ec-ae0e-87fb7ce1ac28.png" width="500">
 
