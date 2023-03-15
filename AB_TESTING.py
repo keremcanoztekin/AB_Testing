@@ -15,7 +15,7 @@ pd.set_option('display.max_rows', 10)
 pd.set_option('display.float_format', lambda x: '%.5f' % x)
 
 ######################################################
-# AB Testing (Bağımsız İki Örneklem T Testi)
+# Steps of AB Testing 
 ######################################################
 
 #1. Establish Hypotheses
@@ -27,21 +27,18 @@ pd.set_option('display.float_format', lambda x: '%.5f' % x)
 # - 2. Mannwhitneyu test if assumptions are not provided
 # 4. Interpret results based on p-value
 
-
-
 #####################################################
 # Data Preparation 
 #####################################################
 
-# Assign control and test group data to separate variables.
+# 1-Assign control and test group data to separate variables.
 control_df = pd.read_excel("ABTesti/ab_testing.xlsx", sheet_name="Control Group")
 test_df = pd.read_excel("ABTesti/ab_testing.xlsx", sheet_name="Test Group")
 
-# Combining control and test group data
+# 2-Combining control and test group data
 control_df.columns = [col + "_control" for col in control_df.columns]
 test_df.columns = [col + "_test" for col in test_df.columns]
 df = pd.concat([control_df,test_df], axis=1)
-
 
 #####################################################
 # Defining A/B Test Hypothesis
@@ -51,54 +48,36 @@ df = pd.concat([control_df,test_df], axis=1)
 # H0: There is no statistically significant difference between the purchase averages of Maximum Bidding and Average Bidding.
 # H1:There is a statistically significant difference between the purchase averages of Maximum Bidding and Average Bidding.
 
-
-
-#####################################################
-# GÖREV 3: Implementation of Hypothesis Testing
-#####################################################
-
-
 ######################################################
 # Assumption Control
-
+######################################################
 
 # Testing separately whether the control and test group comply with the normality assumption via the Purchase variable.
-# Normality Assumption
+   # 1-Normality Assumption
 test_stat, pvalue = shapiro(df["Purchase_control"])
 print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 
 test_stat, pvalue = shapiro(df["Purchase_test"])
 print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 
-# Variance Homogeneity
+   # 2-Variance Homogeneity
 test_stat, pvalue = levene(df["Purchase_control"],
                            df["Purchase_test"])
 print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 
-
-#######################################################
-# Selecting and applying the appropriate test according to the Assumption of Normality and Homogeneity of Variance results
 ######################################################
+# Implementation of Hypothesis Testing
+#####################################################
 
 test_stat, pvalue = ttest_ind(df["Purchase_control"],df["Purchase_test"],
                               equal_var=True)
 print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 
-# Adım 3: Test sonucunda elde edilen p_value değerini göz önünde bulundurarak kontrol ve test grubu satın alma
-# ortalamaları arasında istatistiki olarak anlamlı bir fark olup olmadığını yorumlayınız.
-
-# h0 hipotezimiz reddedilemez, çünkü p value'su 0.05'ten büyük.
-# yani bu Bidding yöntemleri satın alım ortalamaları arasında istatistiksel olrak fark yoktur hipotezimiz %95 güvenle fark yoktur.
-
-
-##############################################################
-# GÖREV 4 : Sonuçların Analizi
-##############################################################
-
-# Adım 1: Hangi testi kullandınız, sebeplerini belirtiniz.
-
-# varsayım kontrolleerini tamamladıktan sonra iki kontroldende hipotezimiz red yemediği için
-# t test
+#######################################################
+# Analysis of Results
+#####################################################
+# THE H0 hypothesis cannot be rejected because its p-value is greater than 0.05.
+# It means that there is no statistically significant difference between the purchasing averages of these Bidding methods.
 
 
 
