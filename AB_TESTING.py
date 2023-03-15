@@ -76,7 +76,7 @@ print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 #######################################################
 # Analysis of Results
 #####################################################
-# THE H0 hypothesis cannot be rejected because its p-value is greater than 0.05.
+# The H0 hypothesis cannot be rejected because its p-value is greater than 0.05.
 # It means that there is no statistically significant difference between the purchasing averages of these Bidding methods.
 
 
