@@ -37,6 +37,6 @@ This dataset contains information about a company's website, including the numbe
 
      2️⃣ If assumptions are not met, use the Mann-Whitney U test.
 
-📈 Step 4: Interpret the Results Based on the p-value
+📈 **Step 4: Interpret the Results Based on the p-value**
 
-If p-value is less than the significance level (usually 0.05), reject the null hypothesis and conclude that there is a significant difference between the two samples. Otherwise, fail to reject the null hypothesis and conclude that there is no significant difference between the two samples.
+If the p value is less than the significance level (0.05), reject the null hypothesis and it is concluded that there is a significant difference between the two samples. If the p-value is greater than the significance level (0.05), it cannot reject the null hypothesis and it is concluded that there is no significant difference between the two samples.
