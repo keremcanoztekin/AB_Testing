@@ -21,9 +21,9 @@ This dataset contains information about a company's website, including the numbe
 
 🔍 **Step 1: Formulate Hypotheses**
 
- &#8226; H0: There is no significant difference between the two samples.
+   &#8226; H0: There is no significant difference between the two samples.
  
- &#8226; H1: There is a significant difference between the two samples.
+   &#8226; H1: There is a significant difference between the two samples.
  
 📊 **Step 2: Assumption Check**
 
