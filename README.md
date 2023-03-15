@@ -21,16 +21,20 @@ This dataset contains information about a company's website, including the numbe
 
 🔍 Step 1: Formulate Hypotheses
 
-&#8226;  H0: There is no significant difference between the two samples.
-  H1: There is a significant difference between the two samples.
+ &#8226;  H0: There is no significant difference between the two samples.
+ &#8226; H1: There is a significant difference between the two samples.
 📊 Step 2: Assumption Check
 
 1️⃣ Normality assumption: Use Shapiro-Wilk test to check normality assumption of the sample distributions.
+
 2️⃣ Homogeneity of variance: Use Levene's test to check if variances of the samples are equal.
+
 🔍 Step 3: Application of the Hypothesis Test
 
 1️⃣ If assumptions are met, use the independent two-sample t-test.
+
 2️⃣ If assumptions are not met, use the Mann-Whitney U test.
+
 📈 Step 4: Interpret the Results Based on the p-value
 
 If p-value is less than the significance level (usually 0.05), reject the null hypothesis and conclude that there is a significant difference between the two samples. Otherwise, fail to reject the null hypothesis and conclude that there is no significant difference between the two samples.
