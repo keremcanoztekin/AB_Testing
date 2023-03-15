@@ -19,7 +19,7 @@ This dataset contains information about a company's website, including the numbe
 ## 📉Hypothesis Test Steps
    📋 **Analysis Plan: Two-Sample Hypothesis Test**
 
-🔍 **Step 1: Formulate Hypotheses**
+🔍 **Step 1: Defining The Hypothesis**
 
    &#8226; H0: There is no significant difference between the two samples.
  
