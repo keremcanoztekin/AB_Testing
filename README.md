@@ -1,6 +1,6 @@
 # A/B Testing
 
-<img src="https://user-images.githubusercontent.com/103461795/225143063-07e98e6d-cf4e-48ec-ae0e-87fb7ce1ac28.png" width="500">
+<img src="https://user-images.githubusercontent.com/103461795/225143063-07e98e6d-cf4e-48ec-ae0e-87fb7ce1ac28.png" alt="My Image" style="display: block; margin: 0 auto;">
 
 ## 💼Business Problem
 Recently, Facebook introduced a new bidding type called average bidding as an alternative to the maximum bidding. One of our clients, company X, has decided to test this new feature and wants to understand if average bidding generates more conversions than maximum bidding through an A/B test. The A/B test has been running for a month, and X company now expects you to analyze the results of this A/B test. The ultimate success metric for X company is Purchase. Therefore, the Purchase metric should be the focus of statistical testing.
